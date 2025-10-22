@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import Sidebar from "./components/Sidebar";
+import SalesPage from "./pages/SalesPage";
+import FabricacaoPage from "./pages/FabricacaoPage";
+import HistoricoPage from "./pages/HistoricoPage";
+import IndicadoresPage from "./pages/IndicadoresPage";
+import InstalacaoPage from "./pages/InstalacaoPage";
+import PosVendaPage from "./pages/PosVendaPage";
+import FeedbackPage from "./pages/FeedbackPage";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="app-layout d-flex">
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+        <main className="main-content flex-grow-1">
+          {/* Mobile top bar with hamburger */}
+          <div className="topbar d-md-none p-2 d-flex align-items-center bg-primary text-white">
+            <button
+              className="btn btn-dark"
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+            >
+              <FontAwesomeIcon icon={faBars} />
+            </button>
+            <h5 className="ms-3 mb-0">OTIS Manager</h5>
+          </div>
+
+          <Routes>
+            <Route path="/" element={<SalesPage />} />
+            <Route path="/venda" element={<SalesPage />} />
+            <Route path="/fabricacao" element={<FabricacaoPage />} />
+            <Route path="/historico" element={<HistoricoPage />} />
+            <Route path="/indicadores" element={<IndicadoresPage />} />
+            <Route path="/instalacao" element={<InstalacaoPage />} />
+            <Route path="/posvenda" element={<PosVendaPage />} />
+            <Route path="/feedback" element={<FeedbackPage />} />
+          </Routes>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
