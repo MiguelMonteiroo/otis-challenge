@@ -1,0 +1,71 @@
+/* Cores OFICIAIS da OTIS */
+:root {
+  --otis-blue: #002855;
+  --otis-gold: #c5a572;
+}
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Tabela */
+.table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 40, 85, 0.05);
+}
+
+/* Botões */
+button {
+  transition: all 0.2s;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal */
+.modal-header {
+  border-bottom: 3px solid var(--otis-gold);
+}
+
+/* Badges personalizados */
+.badge {
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .table {
+    font-size: 0.875rem;
+  }
+}
+
+/* Animação de sucesso */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert {
+  animation: slideIn 0.3s ease-out;
+}
