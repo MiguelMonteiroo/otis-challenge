@@ -1,30 +1,89 @@
-.sales-form-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-height: 100%;
+@import url('../App.css');
+
+/* Base card styling */
+.sales-form-card {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-medium);
+  border-radius: 10px;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
-/* Optional: make header sticky */
-.sales-header {
-  background-color: #f8f9fa;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #e9ecef;
+.sales-form-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Scrollable section for form */
-.sales-form-content {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding-right: 0.5rem;
+.sales-form-header {
+  background-color: var(--otis-blue);
+  color: var(--white);
+  font-weight: 600;
 }
 
-/* Adjust padding for mobile */
-@media (max-width: 767px) {
-  .sales-form-content {
-    padding-right: 0;
+.sales-form-card table th {
+  background-color: var(--gray-medium);
+  color: var(--otis-blue);
+}
+
+/* ===============================
+   🎨 OTIS Button Styles
+   =============================== */
+.otis-btn {
+  font-weight: 500;
+  border-radius: 8px !important;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+/* Primary Button – OTIS Blue */
+.otis-btn-primary {
+  background-color: var(--otis-blue);
+  color: var(--white);
+}
+
+.otis-btn-primary:hover {
+  background-color: var(--navy-medium);
+  color: var(--gold-light);
+}
+
+/* Outline Button – OTIS Gold */
+.otis-btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--otis-gold) !important;
+  color: var(--otis-gold);
+}
+
+.otis-btn-outline:hover {
+  background-color: var(--otis-gold);
+  color: var(--white);
+}
+
+/* Danger Button */
+.otis-btn-danger {
+  border: 2px solid var(--danger) !important;
+  color: var(--danger);
+  background-color: transparent;
+}
+
+.otis-btn-danger:hover {
+  background-color: var(--danger);
+  color: var(--white);
+}
+
+/* Hover animation */
+.otis-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sales-form-card {
+    max-width: 95%;
+  }
+
+  .sales-form-card table {
+    font-size: 0.9rem;
   }
 }

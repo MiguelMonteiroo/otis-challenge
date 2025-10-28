@@ -1,4 +1,20 @@
 /* General layout for sidebar + main content */
+
+:root {
+  --otis-blue: #002855; /* Azul OTIS oficial */
+  --otis-gold: #c5a572; /* Dourado OTIS oficial */
+  --navy-medium: #1a3a5c;
+  --navy-light: #2a4a6c;
+  --gold-light: #d4b671;
+  --gold-dark: #b49651;
+  --white: #ffffff;
+  --gray-light: #f8f9fa;
+  --gray-medium: #e9ecef;
+  --warning: #ff9800;
+  --danger: #dc3545;
+  --success: #28a745;
+  --info: #17a2b8;
+}
 .app-layout {
   display: flex;
   min-height: 100vh;

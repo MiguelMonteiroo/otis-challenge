@@ -1,0 +1,45 @@
+@import url('../App.css');
+.sales-metrics-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.metric-card {
+  background-color: var(--white);
+  border: 2px solid var(--otis-blue);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  flex: 1 1 200px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.metric-card h5 {
+  color: var(--otis-blue);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--otis-gold);
+}
+
+.metric-value.warning {
+  color: var(--warning);
+}
+
+.metric-value.success {
+  color: var(--success);
+}

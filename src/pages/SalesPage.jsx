@@ -1,14 +1,19 @@
 import React from "react";
+import SalesMetrics from "../components/SalesMetrics";
 import SalesForm from "../components/SalesForm";
-import "./PageLayout.css";
+import "./SalesPage.css";
 
 const SalesPage = () => {
   return (
-    <section className="page-section d-flex justify-content-center align-items-center">
-      <div className="page-container shadow p-4 bg-white rounded">
+    <main className="sales-page">
+      <section className="sales-metrics-section">
+        <SalesMetrics />
+      </section>
+
+      <section className="sales-form-section">
         <SalesForm />
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 
