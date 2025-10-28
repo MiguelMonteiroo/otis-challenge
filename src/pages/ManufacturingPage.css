@@ -1,0 +1,119 @@
+.manufacturing-page-container {
+  padding: 2rem;
+  background-color: #f8f9fc;
+  min-height: 100vh;
+}
+
+.page-title {
+  color: var(--otis-blue);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Metrics ===== */
+.metrics-container {
+  text-align: center;
+}
+
+.metric-card {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card h6 {
+  font-weight: 600;
+}
+
+.metric-card.completed {
+  background-color: #00a86b;
+}
+
+.metric-card.inprogress {
+  background-color: var(--otis-blue);
+}
+
+.metric-card.pending {
+  background-color: #f0ad4e;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Stages ===== */
+.stages-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.stage-card {
+  border-left: 5px solid var(--otis-gold);
+  border-radius: 8px;
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status.pendente {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.status.emandamento {
+  background-color: var(--otis-blue);
+  color: white;
+}
+
+.status.concluído {
+  background-color: #00a86b;
+  color: white;
+}
+
+/* Progress bar */
+.progress-otis {
+  height: 18px;
+  border-radius: 10px;
+}
+
+.progress-otis .progress-bar {
+  background-color: var(--otis-gold);
+}
+
+/* Buttons reuse OTIS styles */
+.otis-btn {
+  font-weight: 500;
+  border-radius: 8px !important;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.otis-btn-primary {
+  background-color: var(--otis-blue);
+  color: white;
+}
+
+.otis-btn-primary:hover {
+  background-color: var(--navy-medium);
+  color: var(--gold-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stages-container {
+    grid-template-columns: 1fr;
+  }
+}

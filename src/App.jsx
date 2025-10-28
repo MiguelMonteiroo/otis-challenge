@@ -6,7 +6,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Sidebar from "./components/Sidebar";
 import SalesPage from "./pages/SalesPage";
-import FabricacaoPage from "./pages/FabricacaoPage";
+import ManufacturingPage from "./pages/ManufacturingPage";
 import HistoricoPage from "./pages/HistoricoPage";
 import IndicadoresPage from "./pages/IndicadoresPage";
 import InstalacaoPage from "./pages/InstalacaoPage";
@@ -36,7 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<SalesPage />} />
             <Route path="/venda" element={<SalesPage />} />
-            <Route path="/fabricacao" element={<FabricacaoPage />} />
+            <Route path="/fabricacao" element={<ManufacturingPage />} />
             <Route path="/historico" element={<HistoricoPage />} />
             <Route path="/indicadores" element={<IndicadoresPage />} />
             <Route path="/instalacao" element={<InstalacaoPage />} />
