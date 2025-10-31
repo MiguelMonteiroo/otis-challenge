@@ -104,7 +104,7 @@ const IndicadoresPage = () => {
       <Container fluid className="py-4">
         {/* Header */}
         <div className="page-header mb-4">
-          <h2 className="page-title">
+          <h2 className="indicadores-title">
             <FontAwesomeIcon icon={faChartLine} className="me-3" />
             Indicação de Produção
           </h2>

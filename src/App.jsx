@@ -9,7 +9,7 @@ import SalesPage from "./pages/SalesPage";
 import ManufacturingPage from "./pages/ManufacturingPage";
 import HistoricoPage from "./pages/HistoricoPage";
 import IndicadoresPage from "./pages/IndicadoresPage";
-import InstalacaoPage from "./pages/InstalacaoPage";
+import InstallationPage from "./pages/InstallationPage";
 import PosVendaPage from "./pages/PosVendaPage";
 import FeedbackPage from "./pages/FeedbackPage";
 
@@ -39,7 +39,7 @@ function App() {
             <Route path="/fabricacao" element={<ManufacturingPage />} />
             <Route path="/historico" element={<HistoricoPage />} />
             <Route path="/indicadores" element={<IndicadoresPage />} />
-            <Route path="/instalacao" element={<InstalacaoPage />} />
+            <Route path="/instalacao" element={<InstallationPage />} />
             <Route path="/posvenda" element={<PosVendaPage />} />
             <Route path="/feedback" element={<FeedbackPage />} />
           </Routes>

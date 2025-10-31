@@ -1,0 +1,118 @@
+@import "../App.css";
+
+
+/* Página */
+.installation-container {
+  padding: 2rem;
+  background: var(--gray-light);
+}
+
+.page-title {
+  color: var(--otis-blue);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* ✅ MÉTRICAS */
+.installation-metrics {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border-left: 6px solid var(--otis-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  text-align: center;
+  flex: 1;
+}
+
+.metric-card span {
+  font-size: .85rem;
+  color: var(--navy-medium);
+}
+
+.metric-card strong {
+  font-size: 1.4rem;
+  color: var(--otis-blue);
+}
+
+.metric-card.in-progress {
+  border-color: var(--info);
+}
+
+.metric-card.pending {
+  border-color: var(--warning);
+}
+
+.metric-card.completed {
+  border-color: var(--success);
+}
+
+/* Cartões de instalação */
+.installation-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1.4rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--gray-medium);
+  transition: .2s;
+}
+
+.installation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+/* Barra de progresso */
+.progress-track {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.progress-step {
+  font-size: .78rem;
+  padding: .4rem .6rem;
+  border-radius: 6px;
+  background: var(--gray-medium);
+  color: var(--navy-medium);
+  transition: .3s;
+}
+
+.progress-step.active {
+  background: var(--otis-blue);
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Botão */
+.next-step-btn {
+  background: var(--otis-gold);
+  border: none;
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  color: var(--otis-blue);
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.next-step-btn:hover:not(:disabled) {
+  background: var(--gold-dark);
+}
+
+.next-step-btn:disabled {
+  background: var(--gray-medium);
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .installation-metrics {
+    flex-direction: column;
+  }
+}
