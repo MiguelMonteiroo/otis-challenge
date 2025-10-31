@@ -31,6 +31,10 @@
   min-height: 100vh;
 }
 
+.topbar{
+  background-color: var(--otis-blue)!important;
+}
+
 /* Make sure content doesn't hide behind sidebar */
 @media (max-width: 768px) {
   .main-content {
